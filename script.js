@@ -1,19 +1,19 @@
-let money = 1000;
-let time = '2020 - 05 - 31';
+'use strict';
 
-appData = {
-    budget: money,
-    timeData: time,
-    expenses: {
-        apartmentRent: 550
-    },
-    optionalExpenses: '',
-    income: [],
-    saving: false
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-}
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-alert('бюджет на 1 день ' + money / 31 + ' PLN');
-console.log(appData.budget + ' PLN');
-console.log(appData.timeData + ' May');
-console.log(appData.expenses.apartmentRent + ' PLN');
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+    b = prompt('На сколько оцените его?', '');
+
+
+personalMovieDB.movies[a] = b;
+
+console.log(personalMovieDB);
